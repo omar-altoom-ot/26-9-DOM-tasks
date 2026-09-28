@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+/* Labels */
+label {
+  width: 350px;
+  margin-top: 15px;
+  margin-bottom: 6px;
+
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* Inputs */
+input {
+  width: 350px;
+  height: 45px;
+
+  padding: 0 14px;
+
+  border: 2px solid transparent;
+  border-radius: 8px;
+  outline: none;
+
+  background-color: white;
+  font-size: 16px;
+
+  transition: 0.2s;
+}
+
+input:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.25);
+}
+
+/* Validation messages */
+#userNameDiv,
+#passDiv,
+#confirmDiv {
+  width: 350px;
+  min-height: 20px;
+
+  margin-top: 5px;
+
+  color: #ffdddd;
+  font-size: 13px;
+}
+
+/* Submit button */
+#btn {
+  width: 350px;
+  height: 45px;
+
+  margin-top: 20px;
+
+  border: none;
+  border-radius: 8px;
+
+  background-color: #4f46e5;
+  color: white;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+#btn:hover {
+  background-color: #4338ca;
+  transform: translateY(-2px);
+}
+
+#btn:active {
+  transform: translateY(0);
+}

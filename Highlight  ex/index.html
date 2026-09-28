@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>DOM Exercises</title>
+    <style>
+      #paragraph {
+        white-space: pre-line;
+      }
+    </style>
+    <style>
+      .long-word {
+        background-color: yellow;
+      }
+
+      .sentence {
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 id="heading">Heading</h1>
+    <h2>the count of the words in paragraph is : <span id="count"></span></h2>
+    <p id="paragraph">
+      Hey, you're not permitted in there. It's restricted. You'll be deactivated
+      for sure. Don't call me a mindless philosopher, you overweight glob of
+      grease! Now come out before somebody sees you. Secret mission? What plans?
+      What are you talking about? I'm not getting in there! I'm going to regret
+      this. There goes another one. Hold your fire. There are no life forms. It
+      must have been short-circuited. That's funny, the damage doesn't look as
+      bad from out here
+    </p>
+    <a href="https://google.com/">source</a>
+    <script>
+      const p = document.getElementById("paragraph");
+
+      //ex one
+      const words = p.textContent.split(" ");
+
+      p.textContent = "";
+
+      for (let i = 0; i < words.length; i++) {
+        if (words[i].length >= 8) {
+          p.innerHTML +=
+            `<span style="background-color:yellow">${words[i].trim()}<span>` +
+            " ";
+        } else {
+          p.innerHTML += words[i].trim() + " ";
+        }
+      }
+
+      //ex 2
+      let fullpara = "";
+      const words2 = p.textContent.split(".");
+      for (let i = 0; i < words2.length; i++) {
+        const trimmedSentence = words2[i].trim();
+        if (trimmedSentence !== "") {
+          fullpara += trimmedSentence + ".\n";
+        }
+      }
+      p.textContent = fullpara;
+
+      //ex3
+      let count = document.getElementById("count");
+      count.textContent = p.textContent.trim().split(/\s+/).length;
+      //this is mean you should remove every spaces " " , \t or \n
+      //if it repeated one or more time thats remove all the unnecessary spaces
+    </script>
+  </body>
+</html>
+
+<!--
+ const paragraph = document.getElementById("paragraph");
+      const heading = document.getElementById("heading");
+
+      // Exercise 1
+      // Highlight words longer than 8 characters
+      let words = paragraph.textContent.trim().split(/\s+/);
+
+      paragraph.innerHTML = words
+        .map((word) => {
+          // Ignore punctuation when checking length
+          const cleanWord = word.replace(/[.,!?;:]/g, "");
+
+          if (cleanWord.length > 8) {
+            return `<span class="long-word" style="background-color:yellow;">${word}</span>`;
+          }
+
+          return word;
+        })
+        .join(" ");
+
+      // Exercise 2
+      // Add link after paragraph
+      const link = document.createElement("a");
+
+      link.href = "https://google.com/";
+      link.textContent = "Source";
+      link.target = "_blank";
+
+      paragraph.after(link);
+
+      // Exercise 3
+      // Put every sentence on a separate line
+      const currentText = paragraph.textContent.trim();
+
+      const sentences = currentText
+        .split(".")
+        .map((sentence) => sentence.trim())
+        .filter((sentence) => sentence.length > 0);
+
+      paragraph.innerHTML = "";
+
+      sentences.forEach((sentence) => {
+        const span = document.createElement("span");
+
+        span.className = "sentence";
+        span.textContent = sentence + ".";
+
+        paragraph.appendChild(span);
+      });
+
+      // Exercise 4
+      // Count words in paragraph
+      const wordCount = currentText
+        .split(/\s+/)
+        .filter((word) => word.length > 0).length;
+
+      const countText = document.createElement("p");
+      countText.textContent = "Word count: " + wordCount;
+
+      heading.after(countText);-->

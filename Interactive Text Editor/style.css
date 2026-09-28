@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 45px 20px;
+  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* Title */
+h1 {
+  text-align: center;
+  font-size: 24px;
+  margin: 0 0 18px 0;
+  color: #333;
+}
+
+/* Text display */
+#target {
+  width: 455px;
+  height: 91px;
+  margin: 0 auto 19px auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: cyan;
+  color: red;
+
+  border: 1px solid #333;
+  border-radius: 4px;
+
+  font-family: Georgia, serif;
+  font-size: 34px;
+}
+
+/* Controls box */
+.controls {
+  width: 455px;
+  margin: 0 auto;
+
+  padding: 11px 15px 15px 15px;
+
+  background-color: white;
+
+  border: 1px solid #d5d5d5;
+  border-radius: 6px;
+}
+
+/* Buttons */
+.button-group {
+  margin-bottom: 5px;
+}
+
+button {
+  background-color: #4b4b91;
+  color: white;
+
+  border: none;
+  border-radius: 4px;
+
+  padding: 6px 11px;
+  margin: 4px 2px;
+
+  font-size: 12px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3d3d7d;
+}
+
+/* Settings rows */
+.settings {
+  display: flex;
+  align-items: center;
+  margin-top: 7px;
+}
+
+.settings label {
+  font-size: 13px;
+  font-weight: bold;
+  margin-right: 7px;
+}
+
+/* Color inputs */
+#textColor,
+.backgroundColor {
+  width: 34px;
+  height: 22px;
+
+  padding: 0;
+  margin-right: 9px;
+
+  border: 1px solid #aaa;
+  cursor: pointer;
+}
+
+/* Font size */
+#fontSize {
+  width: 63px;
+  height: 24px;
+
+  margin-right: 10px;
+
+  border: 1px solid #bbb;
+  border-radius: 4px;
+
+  padding-left: 7px;
+}
+
+/* Font dropdown */
+#fontFamily {
+  width: 111px;
+  height: 25px;
+
+  border: 1px solid #aaa;
+  border-radius: 4px;
+
+  background-color: white;
+  padding: 2px 5px;
+}

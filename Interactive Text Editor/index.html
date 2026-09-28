@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Text Editor</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1>Interactive Text Editor</h1>
+
+    <div id="target"><p>Hello</p></div>
+
+    <div class="controls">
+      <div class="button-group">
+        <button id="bold">Bold</button>
+        <button id="italic">Italic</button>
+
+        <button id="alignmentLeft">Left</button>
+        <button id="alignmentCenter">Center</button>
+        <button id="alignmentRight">Right</button>
+      </div>
+
+      <div class="button-group">
+        <button class="upper">Upper Case</button>
+        <button class="lower">Lower Case</button>
+        <button class="capitalize">Capitalize</button>
+        <button class="clear">Clear Text</button>
+      </div>
+
+      <div class="settings">
+        <label>Text Color:</label>
+        <input type="color" id="textColor" value="#990000" />
+
+        <label>Background:</label>
+        <input type="color" class="backgroundColor" value="#00ffff" />
+      </div>
+
+      <div class="settings">
+        <label for="fontSize">Font Size:</label>
+        <input type="number" id="fontSize" value="47" />
+
+        <label for="fontFamily">Font:</label>
+        <select id="fontFamily">
+          <option value="Georgia">Georgia</option>
+          <option value="Arial">Arial</option>
+          <option value="Times New Roman">Times New Roman</option>
+        </select>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
